@@ -59,7 +59,7 @@ public class Pathfinder extends JPanel{
 		visited = new ArrayList<Cell>();
 		shortest = new ArrayList<Cell>();
 		 cs = getWidth() / board.length;  
-		 System.out.println(cs);
+		
 		
 	}
 	
@@ -304,7 +304,6 @@ public class Pathfinder extends JPanel{
 			goal = true;
 			return;
 		}
-		System.out.println("solving???");
 		//if(visited.size() == 24*24)
 			//return;
 		visited.add(c);
@@ -397,7 +396,6 @@ public class Pathfinder extends JPanel{
 	//Calls bfs first then uses the board and the parents 2d array to follow the parents starting from the goal to get the shortest path
 	public void findShortest() {
 		bfs();
-		System.out.println("Done");
 		parents[0][0] = null;
 		Cell curr = null;
 		Cell par = null;
@@ -407,7 +405,6 @@ public class Pathfinder extends JPanel{
 			while(true) {
 				shortest.addFirst(par);
 				par = parents[par.y][par.x];
-				System.out.println("Looping?");
 				if(par == null)
 					break;
 				

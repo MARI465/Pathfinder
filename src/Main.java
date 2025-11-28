@@ -32,7 +32,6 @@ public class Main {
 		
 		genB.addActionListener(e -> {
 			p.reset();
-			System.out.println("test");
 			 genB.setEnabled(false); bfsB.setEnabled(false); dfsB.setEnabled(false); text.setEnabled(false);
 			 String str = text.getText();
 			//Catches errors when mismatching types
@@ -54,7 +53,6 @@ public class Main {
 			 }
 			    new Thread(() -> {
 			        p.makeBoard(); 
-			        System.out.println("Board");
 			        SwingUtilities.invokeLater(() -> {
 			            genB.setEnabled(true); bfsB.setEnabled(true); dfsB.setEnabled(true); text.setEnabled(true);
 			        });
